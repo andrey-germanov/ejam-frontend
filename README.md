@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Humble Superhero Frontend
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project consists React using Material UI.
+The application allows users to add superheroes with a name, superpower, and humility score.
+The superheroes are displayed in descending order based on their humility score.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Frontend (React with Material UI)
+[User-friendly] form to add superheroes.
+[Displays] a list of superheroes in descending order of humility score.
+Uses [react-toastify] for error and success messages.
+Designed for [scalability] and easy [maintenance].
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Frontend Setup
+Clone the frontend repository.
 
-## Learn More
+## Install dependencies:
+`npm install`
 
-To learn more about Next.js, take a look at the following resources:
+## Start the React app:
+`npm start`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Collaboration Guidelines
+1. Team Player Attitude
+2. Maintain clear documentation for easy onboarding of new developers.
+3. Write modular and maintainable code to allow future enhancements.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## If I Had More Time
+1. Implement UI for user authentication for personalized superhero management.
+2. Add pagination and search capabilities.
+3. Improve UI with advanced Material UI components like tables and modals.
+4. Enhance error handling with detailed messages and fallback UI elements.
+5. Write additional unit and integration tests for higher reliability.
+6. Dockerization can be added later if needed
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+[Frontend]: React, Material UI, Axios, React Toastify
+[Testing]: Jest
+[Deployment]: Local development
