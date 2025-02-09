@@ -41,4 +41,4 @@ Clone the frontend repository.
 ## Technologies Used
 [Frontend]: React, Material UI, Axios, React Toastify
 [Testing]: Jest
-[Deployment]: Local development
+[Deployment]: Vercel
