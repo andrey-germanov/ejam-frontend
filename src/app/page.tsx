@@ -12,16 +12,16 @@ interface Superhero {
   id: number;
   name: string;
   superpower: string;
-  humilityScore: number;
+  humilityscore: number;
 }
 type InputData = {
   name: string;
   superpower: string;
-  humilityScore: number;
+  humilityscore: number;
 }
 export default function SuperheroPage() {
   const [superheroes, setSuperheroes] = useState<Superhero[]>([]);
-  const [formData, setFormData] = useState<InputData>({ name: "", superpower: "", humilityScore: 0 });
+  const [formData, setFormData] = useState<InputData>({ name: "", superpower: "", humilityscore: 0 });
   
   useEffect(() => {
     fetchSuperheroes();
@@ -40,7 +40,7 @@ export default function SuperheroPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleChangeHumilityScore = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangehumilityscore = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: Number(e.target.value) });
   }
 
@@ -64,7 +64,7 @@ export default function SuperheroPage() {
           err.response.data.message.map((error: string)=> toast.error(error));
         });
 
-      setFormData({ name: "", superpower: "", humilityScore: 0 });
+      setFormData({ name: "", superpower: "", humilityscore: 0 });
       fetchSuperheroes();
     } catch (error) {
       console.error("Error adding superhero:", error);
@@ -93,11 +93,11 @@ export default function SuperheroPage() {
           fullWidth
         />
         <TextField
-          name="humilityScore"
+          name="humilityscore"
           label="Humility Score (0-10)"
           type="number"
-          value={formData.humilityScore}
-          onChange={handleChangeHumilityScore}
+          value={formData.humilityscore}
+          onChange={handleChangehumilityscore}
           required
           fullWidth
           slotProps={{ 
@@ -114,7 +114,7 @@ export default function SuperheroPage() {
             <span className="delete" onClick={() => deleteSuperhero(hero.id)}>delete</span>
             <CardHeader title={hero.name} subheader={`Superpower: ${hero.superpower}`} />
             <CardContent>
-              <Typography variant="body2">Humility Score: {hero.humilityScore}</Typography>
+              <Typography variant="body2">Humility Score: {hero.humilityscore}</Typography>
             </CardContent>
           </Card>
         ))}
